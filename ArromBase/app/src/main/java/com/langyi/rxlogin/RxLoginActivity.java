@@ -10,7 +10,17 @@ import com.umeng.socialize.UMAuthListener;
 import com.umeng.socialize.UMShareAPI;
 import com.umeng.socialize.bean.SHARE_MEDIA;
 
+import org.reactivestreams.Subscriber;
+import org.reactivestreams.Subscription;
+
 import java.util.Map;
+
+import io.reactivex.rxjava3.annotations.NonNull;
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.core.ObservableEmitter;
+import io.reactivex.rxjava3.core.ObservableOnSubscribe;
+import io.reactivex.rxjava3.core.Observer;
+import io.reactivex.rxjava3.disposables.Disposable;
 
 /**
  * 作者：Arrom
@@ -31,6 +41,11 @@ public class RxLoginActivity extends Activity implements UMAuthListener {
         LoginPlatform platform= (LoginPlatform) getIntent().getSerializableExtra(PLATFORM_KEY);
         umShareAPI.deleteOauth(this,platformChange(platform),this);
         umShareAPI.getPlatformInfo(this, platformChange(platform),this);
+
+
+
+
+
     }
 
     /**

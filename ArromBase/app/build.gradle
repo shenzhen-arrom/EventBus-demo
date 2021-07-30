@@ -37,6 +37,8 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
     implementation 'androidx.navigation:navigation-fragment:2.3.0'
     implementation 'androidx.navigation:navigation-ui:2.3.0'
+    implementation 'com.google.code.gson:gson:2.8.7'
+
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
@@ -50,5 +52,7 @@ dependencies {
     implementation 'com.tencent.tauth:qqopensdk:3.53.0'//QQ官方依赖库，必选
     implementation 'com.squareup.okhttp3:okhttp:3.12.12'//QQ SDK在3.53.0版本及以上时需要集成okhttp官方依赖库，必选
 
-
+    implementation("com.squareup.okhttp3:okhttp:4.9.1")
+//    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp:logging-interceptor:2.7.5'
 }
